@@ -1,0 +1,16 @@
+{% extends 'basic/standart.html' %}
+
+{% block title %}Полезная информация {% endblock %}
+
+
+{% block content%}
+{% for el in info %}
+
+
+
+<div style="background-color:rgb(143 18 18 / 67%) ; margin: 13px;">
+    <P style="margin: 5px; color:beige">{{ el.term }}</P> 
+    <p style="margin: 10px;color:beige"> - это {{ el.description }} </p>
+</div><br>
+{% endfor %}
+{% endblock %}

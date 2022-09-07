@@ -1,0 +1,81 @@
+{% extends 'basic/standart.html' %}
+
+{% block title %} Наши контакты {% endblock %}
+
+
+{% block content%}
+{% load static %}
+<!-- <div
+    style="height:1000px; display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; margin: 25px ">
+
+
+    <div style="background-color:rgb(49, 155, 136); height:100% ;width:35% ;margin: 25px">
+        <P>Наш Адрес:г.Минск,Перкулок Полевой, 2а
+
+
+
+        </P>
+    </div>
+
+    <div style="height:100% ; margin: 25px; width: 450px;">
+        <iframe src="https://yandex.by/map-widget/v1/?z=12&amp;ol=biz&amp;oid=1274789213" height=100% width=100%
+            frameborder="0"></iframe>
+    </div>
+</div> -->
+
+
+<style>
+    p {
+        margin: 10px;
+    }
+
+    h3 {
+        margin: 10px;
+    }
+</style>
+
+<div style="height: 600px; ; margin: 25px; width:90%; display: flex; justify-content: space-around;">
+    <div
+        style=" display: flex; flex-direction: column; background-color:rgb(237 118 118 / 35%); height:100% ;width:35% ;margin: 25px">
+        <h3>Адрес</h3>
+        <p>г.Минск </p>
+        <p> переулок Полевой 2а</p>
+        <p> «Центр дополнительного образования детей и молодёжи «Маяк»</p>
+        <p> кабинет 301 (3-этаж)</p>
+
+        <h3>Телефон</h3>
+        <p>+375297738567 (МТС)</p>
+        <p>Артём Геннадьевич</p>
+
+
+        <p> <a href="https://vk.com/wierusz">
+                <h3>Страница в VK</h3>
+            </a></p>
+
+
+        <p><a href="https://www.instagram.com/club.wierusz/?utm_source=ig_profile_share&igshid=1al5jacon84vn">
+                <h3>Instagram</h3>
+            </a> </p>
+
+    </div>
+
+    <div style="background-color:rgb(237 118 118 / 35%); height:100% ;width:35% ;margin: 25px">
+        <div>
+            <div class="container">
+                <img src="{% static 'basic/img/eTQXA6xlV7o.jpg' %}" style="margin: 25px;
+                height: 300px;">
+            </div>
+        </div>
+        <div>
+            <p> Клуб исторической реконструкции Веруш - это не только любовь к истории но и незабываемые преключения в
+                окружении веселой компании, в режиме NON STOP. </p>
+            <p>Приходите будем рады вам =) </p>
+        </div>
+    </div>
+</div>
+<div style="width: 90%; margin: 50px; height:300px">
+    <iframe src="https://yandex.by/map-widget/v1/?z=12&amp;ol=biz&amp;oid=1274789213" height=100% width=100%
+        frameborder="0"></iframe>
+</div>
+
+{% endblock %}

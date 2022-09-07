@@ -1,0 +1,182 @@
+{% extends 'basic/standart.html' %}
+
+
+{% block title %}Состав Клуба {% endblock %}
+
+
+{% block content%}
+{% load static %}
+<style>
+    .img_div {
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper {
+        width: 250px;
+        height: 300px;
+
+
+    }
+
+    .exmpl {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .exmpl img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .info {
+        width: 400px;
+        height: 300px;
+        background-color: rgb(233 3 21 / 63%)
+    }
+
+    p {
+        color: rgb(242, 238, 238);
+    }
+
+    .mt-0 {
+        color: rgb(242, 238, 238);
+    }
+</style>
+
+
+<h1 align="center" style="color: rgb(232, 12, 30)"> Иерархия клуба </h1><br>
+<div style="display: flex; flex-direction: row;">
+    <div class="img_div">
+        <img src="{% static 'basic/img/IQCURwya3ZQ.jpg' %}" height="100%">
+    </div>
+    <div style="background-color:  rgba(45, 95, 11, 0.874); width: 60%;">
+        <h2 align="center" >Десятник</h2>
+        <h3 align="center">Пехота</h3>
+        <h4 align="center">Ополчение</h4>
+        <h5 align="center">Кмет</h5>
+        <h6 align="center">Рекрут</h6>
+    </div>
+    <div class="img_div">
+        <img src="{% static 'basic/img/1489220194362.jpg' %}" height="100%">
+    </div>
+</div><br>
+
+
+
+<h1 align="center" style="color: rgb(232, 12, 30)"> Участники клуба </h1>
+
+
+
+
+<h1 align="center"> Десятник </h1>
+
+<div style="display: flex; flex-direction: row; justify-content: space-around; flex-wrap: wrap; align-content: center">
+    {% for i in desytnik %}
+    <div
+        style="display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; margin: 40px;">
+        <div class="wrapper exmpl">
+            <img src="{{ i.image.url }}" alt="">
+        </div>
+
+        <div class="info">
+            <h5 class="mt-0">{{ i.rank}}</h5>
+            <p> Имя :{{ i.name }} Фамилия :{{ i.surname }}</p>
+
+            <p> День Рождения :{{ i.date_of_birth }}</p>
+            <p> Количество лет в клубе :{{ i.year_of_joining }}</p>
+            <p> статус :{{ i.status }}</p>
+            <p> <a href="{{i.vk }}">Страница в соц.сетях</a> </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<h1 align="center"> Пехотинец </h1>
+
+<div style="display: flex; flex-direction: row; justify-content: space-around; flex-wrap: wrap; align-content: center">
+    {% for i in pehota %}
+    <div
+        style="display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; margin: 40px;">
+        <div class="wrapper exmpl">
+            <img src="{{ i.image.url }}" alt="">
+        </div>
+
+        <div class="info">
+            <h5 class="mt-0">{{ i.rank}}</h5>
+            <p> Имя :{{ i.name }} Фамилия :{{ i.surname }}</p>
+
+            <p> День Рождения :{{ i.date_of_birth }}</p>
+            <p> Количество лет в клубе :{{ i.year_of_joining }}</p>
+            <p> статус :{{ i.status }}</p>
+            <p> <a href="{{i.vk }}">Страница в соц.сетях</a> </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<h1 align="center"> Ополченцы </h1>
+
+<div style="display: flex; flex-direction: row; justify-content: space-around; flex-wrap: wrap; align-content: center">
+    {% for i in opolchenie %}
+    <div
+        style="display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; margin: 40px;">
+        <div class="wrapper exmpl">
+            <img src="{{ i.image.url }}" alt="">
+        </div>
+
+        <div class="info">
+            <h5 class="mt-0">{{ i.rank}}</h5>
+            <p> Имя :{{ i.name }} Фамилия :{{ i.surname }}</p>
+
+            <p> День Рождения :{{ i.date_of_birth }}</p>
+            <p> Количество лет в клубе :{{ i.year_of_joining }}</p>
+            <p> статус :{{ i.status }}</p>
+            <p> <a href="{{i.vk }}">Страница в соц.сетях</a> </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<h1 align="center"> Кметы </h1>
+
+<div style="display: flex; flex-direction: row; justify-content: space-around; flex-wrap: wrap; align-content: center">
+    {% for i in kmet %}
+    <div
+        style="display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; margin: 40px;">
+        <div class="wrapper exmpl">
+            <img src="{{ i.image.url }}" alt="">
+        </div>
+
+        <div class="info">
+            <h5 class="mt-0">{{ i.rank}}</h5>
+            <p> Имя :{{ i.name }} Фамилия :{{ i.surname }}</p>
+
+            <p> День Рождения :{{ i.date_of_birth }}</p>
+            <p> Количество лет в клубе :{{ i.year_of_joining }}</p>
+            <p> статус :{{ i.status }}</p>
+            <p> <a href="{{i.vk }}">Страница в соц.сетях</a> </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

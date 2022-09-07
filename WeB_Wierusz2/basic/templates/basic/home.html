@@ -1,0 +1,65 @@
+{% extends 'basic/standart.html' %}
+
+{% block title %}Главная страница {% endblock %}
+
+
+{% block content%}
+{% load static %}
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin: 20px;">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'basic/img/4.jpg' %}" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'basic/img/2.jpg' %}" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'basic/img/3.jpg' %}" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'basic/img/1.jpg' %}" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'basic/img/5.jpg' %}" class="d-block w-100" alt="">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+    </button>
+</div>
+
+
+<br>
+
+
+<h2 align="center" style="color: #e80a0a;"> НОВОСТИ из жизни Клуба</h2>
+{% for i in news %}
+
+
+<div style="display: flex; flex-direction: row; margin: 40px; height: 500px">
+
+
+
+    <div name="news_foto">
+        <img src="{{i.image_front.url}}" height=100%>
+    </div>
+
+    <div name="news_content" style="background-color: #eb9a9ac4">
+        <h3 style="color: #000000;" align="center">{{i.title_news}}</h3>
+        <p style="font-size: 1.3rem;">{{i.text}}</p>
+    </div>
+
+</div>
+
+
+
+
+
+
+{% endfor %}
+{% endblock %}
